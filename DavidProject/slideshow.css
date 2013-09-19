@@ -1,0 +1,19 @@
+#slideshow {
+
+   width:890px; height: 510px;
+   overflow-x: scroll; overflow-y: hidden;
+   margin: 25px auto 45px auto;
+   box-shadow: 0px 0px 60px #000;
+    -moz-box-shadow: 0px 0px 60px #000;
+     -webkit-box-shadow: 0px 0px 60px #000;
+    }
+
+#slideshow ul {
+
+   width: 4590px; list-style:none;
+  }
+
+#slideshow ul li {
+
+   float:left;
+ }

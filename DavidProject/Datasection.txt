@@ -1,0 +1,9 @@
+<div id="slideout">
+		<img src="feedback.png" alt="Feedback"/>
+		<div id="slideout_inner">
+			<form>
+				<textarea></textarea>
+				<input type="submit" value="Post feedback"></input>
+			</form>
+		</div>
+	</div>

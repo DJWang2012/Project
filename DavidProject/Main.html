@@ -1,0 +1,545 @@
+<html>
+
+  <head>
+
+<link rel="stylesheet" type="text/css" href="master.css">
+<link rel="stylesheet" type="text/css" href="slideshow.css">
+<link rel="stylesheet" type="text/css" href="slideshow-nav.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="slidepageout.css">
+
+
+
+       <script language="javascript">
+            col=555;
+            function fade() { document.getElementById("fade").style.color="rgb(" + col + "," + col + "," + col + ")"; 
+                               col-=5; if(col>0) setTimeout('fade()', 10); }
+        </script>
+
+
+       <script type="text/javascript">
+
+( function(){ // local scope
+
+	if (!document.querySelectorAll || !document.addEventListener)
+		return
+	var uls = document.querySelectorAll('div.css3splitmenu > ul'),
+			docbody = document.documentElement || document.body,
+			checkboxes = document.querySelectorAll('div.css3splitmenu > input[type="checkbox"]'),
+			zindexvalue = 100
+
+	for (var i=0; i<uls.length; i++){
+		( function(x){ // closure to capture each i value
+			checkboxes<i>.addEventListener('click', function(e){
+				uls[x].style.zIndex = ++zindexvalue
+				for (var y=0; y<uls.length; y++){ // loop through checkboxes other than current and uncheck them (since Chrome doesn't respond to onblur event on checkboxes)
+					if (y != x)
+						checkboxes[y].checked = false
+				}
+				e.cancelBubble = true
+			})
+			checkboxes<i>.addEventListener('blur', function(e){
+				setTimeout(function(), 100) // delay before menu closes, for Opera's sake (otherwise links are un-navigatable)
+				e.cancelBubble = true
+			})
+		}) (i)
+	}
+
+	docbody.addEventListener('click', function(e){
+		for (var i=0; i<uls.length; i++){
+			checkboxes<i>.checked = false
+		}
+	})
+
+})();</script>
+
+
+
+ <script src="file:///C:/Users/David/Desktop/Project/jquery-1.8.1.min.js"></script>
+    <!-- custom javascript -->
+   <script src="file:///C:/Users/David/Desktop/Project/custom.js" type="text/javascript"></script>
+
+ 
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+       <script src="jquery.scrollTo-1.4.3.1.js"></script>
+         <script src="jquery.localscroll-1.2.7.js"></script>
+
+
+
+            <script src="dmenu.js"></script>
+            <script src="data.js"></script>
+
+
+
+  </head>
+
+
+  <body onLoad="fade()">
+ 
+
+     
+
+    <div style="color:#0000FF" class="header">
+
+       <hr></hr>
+
+       <br></br>
+
+       <a style="position:absolute;top:25px;right:100px;"><form name="login">
+           Username<input type="text" name="userid"/>
+           Password<input type="password" name="pswrd"/>
+            <input type="button" onclick="check(this.form)" value="Login"/>
+            <input type="reset" value="Cancel"/>
+           </form></a>
+
+       <script language="javascript">
+              function check(form)/*function to check userid & password*/
+              {
+               /*the following code checkes whether the entered userid and password are matching*/
+               if(form.userid.value == "david" && form.pswrd.value == "david")
+              {
+                window.open('About.html')/*opens the target page while Id & password matches*/
+                  }
+              else
+              {
+                  alert("Error Password or Username")/*displays error message*/
+                   }
+              }
+             </script>
+
+
+
+       
+
+       <h1 style="position:absolute;top:30px;left:70px;">David Wang</h1>
+
+       <br></br>
+       <br></br>
+
+       
+
+       <hr style="color:#FF6666"></hr> 
+
+     </div>
+
+     <div style="color:#FF6666">
+
+       <table border="0" width="100%" background="overallbg.jpg">
+  	  <tr>
+
+		<td align="center" valign="center" cellpadding="5"><div>
+
+                 <ul id="blue-orange-menu">
+	<li class="istylei0"><a href="main.html">Home</a></li>
+	<li class="istylei2"><a href="#"><span>Biography</span></a>
+	<div><h1></h1><h2></h2><ul class="istylem0" style="width:125px;">
+		<li><a href="testlink.html">Features</a></li>
+		<li><a href="#"><span>Installation</span></a>
+		<div><h1></h1><h2></h2><ul class="istylem0" style="width:121px;">
+			<li><a href="testlink.html">Description of Files</a></li>
+			<li><a href="testlink.html">How To Setup</a></li>
+		</ul></div>
+		</li>
+		<li><a href="testlink.html">Parameters Info</a></li>
+		<li><a href="testlink.html">Dynamic Functions</a></li>
+		<li><a href="#"><span>Supported Browsers</span></a>
+		<div><h1></h1><h2></h2><ul class="istylem0" style="width:113px;">
+			<li><a href="#">Windows OS</a></li>
+			<li><a href="#">Internet Explorer</a></li>
+			<li><a href="#">Firefox</a></li>
+			<li><a href="#">Mozilla</a></li>
+			<li><a href="#">Netscape</a></li>
+			<li><a href="#">Opera</a></li>
+			<li><a href="#">MAC OS</a></li>
+			<li><a href="#">Firefox</a></li>
+			<li><a href="#">Safari</a></li>
+			<li><a href="#">Internet Explorer</a></li>
+			<li><a href="#">Unix/Linux OS</a></li>
+			<li><a href="#">Firefox</a></li>
+			<li><a href="#">Konqueror</a></li>
+		</ul></div>
+		</li>
+	</ul></div>
+	</li>
+	<li class="istylei2"><a href="#"><span>Resume</span></a>
+	<div><h1></h1><h2></h2><ul class="istylem0" style="width:145px;">
+		<li><a href="#">Menu samples</a></li>
+		<li><a href="testlink.html">Sample 1</a></li>
+		<li><a href="testlink.html">Sample 2</a></li>
+		<li><a href="testlink.html">Sample 3</a></li>
+		<li><a href="testlink.html">Sample 4</a></li>
+		<li><a href="testlink.html">Sample 5</a></li>
+		<li><a href="testlink.html">Sample 6</a></li>
+		<li><a href="testlink.html">Sample 7</a></li>
+		<li><a href="testlink.html">Sample 8</a></li>
+		<li><a href="testlink.html">Sample 9</a></li>
+	</ul></div>
+	</li>
+	<li class="istylei1"><a href="http://deluxe-menu.com/order-purchase.html" target="_blank">Purchase</a></li>
+	<li class="istylei1"><a href="Contact.html">Contact Us</a></li>
+        <li class="istylei1"><a href="testlink.htm">FAQ</a></li>
+</ul>
+<td width="45%"><p style = "font-family: brush script mt;
+       font-weight: 300; text-transform: uppercase; font-size:25px"><span id="fade">"Random Inspring Quotation as Slogan"</span></p><td></tr>
+
+           
+ 
+	</table>
+
+       <hr></hr>
+
+
+
+
+
+
+    
+ 
+    </div>
+
+
+
+
+<div class="mainmenu">
+
+
+
+
+        <table border="2" width="100%" height="600px" class="body" id="fixedheight">
+  	  <tr>
+		<td align="center" valign="center" rowspan="6" width="75%">
+
+<div id="slideshow">
+	<ul>
+		<li id="lambo1"><a href="http://www.flickr.com/photos/vodcars/4207529693/lightbox/"><img src="lambo1.jpg" alt="Green Lamborghini" /></a></li>
+		<li id="lambo2"><a href="http://www.flickr.com/photos/inno68/5076809499/lightbox/"><img src="lambo2.jpg" alt="White Lamborghini" /></a></li>
+		<li id="lambo3"><a href="http://www.flickr.com/photos/chriswevers/5121055362/lightbox/"><img src="lambo3.jpg" alt="Grey Lamborghini" /></a></li>
+		<li id="lambo4"><a href="http://www.flickr.com/photos/damianmorysfotos/4388501292/lightbox/"><img src="lambo4.jpg" alt="Green Lamborghini" /></a></li>
+		<li id="lambo5"><a href="http://www.flickr.com/photos/exoticcarlife/5299365670/lightbox/"><img src="lambo5.jpg" alt="Yellow Lamborghini" /></a></li>
+	</ul>
+</div>
+<div id="slideshow-nav">
+	<ul>
+		<li><a href="#lambo1">See the green Lamborghini</a></li>
+		<li><a href="#lambo2">See the white Lamborghini</a></li>
+		<li><a href="#lambo3">See the grey Lamborghini</a></li>
+		<li><a href="#lambo4">See the green Lamborghini</a></li>
+		<li><a href="#lambo5">See the yellow Lamborghini</a></li>
+	</ul>
+</div>
+
+
+</td>
+
+
+		<td align="center" valign="center" height="100%">
+
+<div class="freshdesignweb">
+
+                <!-- start article 1 -->
+
+                <p><article class="border c-two" style="background-image:url(fillerfive.jpg)">
+
+                    <div style="opacity: 0;" class="fdw-background">
+
+                        <a href="http://www.freshdesignweb.com" style="color:#fff;"><h4>Area 1</h4></a>
+
+                        <div class="fdw-subtitle a-center">in <a href="#">Works</a></div>
+
+                        <p class="fdw-port">
+
+                            <a href="http://www.google.com">Learn More<span class="vg-icon">*</span></a>
+
+                        </p>
+
+                    </div>
+
+                </article></p>
+
+                
+               
+
+ 
+
+            </div>    
+        
+    
+   </td>
+<tr><td align="center" valign="center" height="100%">
+
+<div class="freshdesignweb">
+
+                <!-- start article 1 -->
+
+                <p><article class="border c-two" style="background-image:url(fillersix.jpg)">
+
+                    <div style="opacity: 0;" class="fdw-background">
+
+                        <a href="http://www.freshdesignweb.com" style="color:#fff;"><h4>Area 2</h4></a>
+
+                        <div class="fdw-subtitle a-center">in <a href="#">Works</a></div>
+
+                        <p class="fdw-port">
+
+                            <a href="http://www.google.com">Learn More<span class="vg-icon">*</span></a>
+
+                        </p>
+
+                    </div>
+
+                </article></p>
+
+                
+               
+
+ 
+
+            </div>    
+        
+    
+   </td></tr>
+
+
+<tr><td align="center" valign="center" height="100%">
+
+<div class="freshdesignweb">
+
+                <!-- start article 1 -->
+
+                <p><article class="border c-two" style="background-image:url(fillerseven.jpg)">
+
+                    <div style="opacity: 0;" class="fdw-background">
+
+                        <a href="http://www.freshdesignweb.com" style="color:#fff;"><h4>Area 3</h4></a>
+                        <div class="fdw-subtitle a-center">in <a href="#">Works</a></div>
+
+                        <p class="fdw-port">
+
+                            <a href="http://www.google.com">Learn More<span class="vg-icon">*</span></a>
+
+                        </p>
+
+                    </div>
+
+                </article></p>
+
+                
+               
+
+ 
+
+            </div>    
+        
+    
+   </td></tr>
+<tr><td align="center" valign="center" height="100%">
+
+<div class="freshdesignweb">
+
+                <!-- start article 1 -->
+
+                <p><article class="border c-two" style="background-image:url(fillereight.jpg)">
+
+                    <div style="opacity: 0;" class="fdw-background">
+
+                        <a href="http://www.freshdesignweb.com" style="color:#fff;"><h4>Area 4</h4></a>
+                        <div class="fdw-subtitle a-center">in <a href="#">Works</a></div>
+
+                        <p class="fdw-port">
+
+                            <a href="http://www.google.com">Learn More<span class="vg-icon">*</span></a>
+
+                        </p>
+
+                    </div>
+
+                </article></p>
+
+                
+               
+
+ 
+
+            </div>    
+        
+    
+   </td></tr>
+                
+            
+                
+          
+	                   
+ 
+	</table>
+
+	 
+         <hr></hr>
+
+
+    </div>
+     
+
+    <div class="archive">
+
+
+ 
+        <table width="100%" height="45%">
+  	  <tr>
+		<td align="center" valign="center" rowspan="6" width="75%">
+
+
+
+                       <table width="100%" height="100%">
+
+                          <tr>
+                                <td align="center" valign="center"> 
+
+                                   <table width="80% height="100%">
+                                        
+                                          <tr><td><h3><a>Area 1</a></h3></td></tr>
+                                          <tr><td><a><p>Division 1</p></a></td></tr>
+                                          <tr><td><a><p>Division 2</p></a></td></tr>
+                                          <tr><td><a><p>Division 3</p></a></td></tr>                             
+
+
+                                   </table>                                    
+                                   </td>
+                                <td align="center" valign="center">  
+                                    <table width="80% height="100%">
+                                        
+                                          <tr><td><h3><a>Area 4</a></h3></td></tr>
+                                          <tr><td><a><p>Division 1</p></a></td></tr>
+                                          <tr><td><a><p>Division 2</p></a></td></tr>
+                                          <tr><td><a><p>Division 3</p></a></td></tr>                             
+
+
+                                   </table>   </td>
+                                <td  valign="center"> <a href="Contact.html">Contact Us </a></td>
+                                <td  valign="center"> <a href="About.html"> About Us </a></td></tr>
+                          <tr>
+                                <td align="center" valign="center">  
+
+                                    <table width="80% height="100%">
+                                        
+                                          <tr><td><h3><a>Area 2</a></h3></td></tr>
+                                          <tr><td><a><p>Division 1</p></a></td></tr>
+                                          <tr><td><a><p>Division 2</p></a></td></tr>
+                                          <tr><td><a><p>Division 3</p></a></td></tr>                             
+
+
+                                   </table>   </td>
+                                <td align="center" valign="center">  
+
+                                   <table width="80% height="100%">
+                                        
+                                          <tr><td><h3><a>Area 5</a></h3></td></tr>
+                                          <tr><td><a><p>Division 1</p></a></td></tr>
+                                          <tr><td><a><p>Division 2</p></a></td></tr>
+                                          <tr><td><a><p>Division 3</p></a></td></tr>                             
+
+
+                                   </table>   </td>
+                                <td valign="center"> FAQ </td>
+                                <td valign="center"> Careers </td></tr>
+                          <tr>
+                                <td align="center" valign="center"> 
+                                    <table width="80% height="100%">
+                                        
+                                          <tr><td><h3><a>Area 3</a></h3></td></tr>
+                                          <tr><td><a><p>Division 1</p></a></td></tr>
+                                          <tr><td><a><p>Division 2</p></a></td></tr>
+                                          <tr><td><a><p>Division 3</p></a></td></tr>                            
+
+
+                                   </table>   </td>
+                                <td align="center" valign="center">  
+
+                                   <table width="80% height="100%">
+                                        
+                                          <tr><td><h3><a>Expertise</a></h3></td></tr>
+                                          <tr><td><a><p>Division 1</p></a></td></tr>
+                                          <tr><td><a><p>Division 2</p></a></td></tr>
+                                          <tr><td><a><p>Division 3</p></a></td></tr>                             
+
+
+                                   </table> </td>
+                                <td valign="center"> 
+                                   <table width="80% height="100%">
+                                        
+                                          <tr><td><h3><a>Culture</a></h3></td></tr>
+                                          <tr><td><a><p>Division 1</p></a></td></tr>
+                                          <tr><td><a><p>Division 2</p></a></td></tr>
+                                          <tr><td><a><p>Division 3</p></a></td></tr>                             
+
+
+                                   </table>  </td>
+                                <td valign="center"> Media Center </td></tr>
+
+
+
+                                                                               
+
+                       </table></td>
+		<td align="center" valign="top" rowspan="3">
+
+
+
+<ul class="ch-grid">
+   <li>
+						<div class="ch-item ch-img-1">				
+							<div class="ch-info-wrap">
+								<div class="ch-info">
+									<div class="ch-info-front ch-img-1"></div>
+									<div class="ch-info-back">
+										<a href="http://www.facebook.com"><h3>Follow me at Facebook</h3></a>
+										
+									</div>	
+								</div>
+							</div>
+						</div>
+					</li>
+
+
+<li>
+						<div class="ch-item ch-img-1">				
+							<div class="ch-info-wrap">
+								<div class="ch-info">
+									<div class="ch-info-front ch-img-2"></div>
+									<div class="ch-info-back">
+										<a href="http://www.twitter.com"><h3>Follow me at Twitter</h3></a>
+										
+									</div>	
+								</div>
+							</div>
+						</div>
+					</li>
+
+
+</ul></td>
+                
+
+                           
+
+	</table>
+
+	 <hr></hr>
+
+
+          <p align="center">Address and Phone Number Information</p>
+
+	 
+         <hr></hr>
+
+
+    </div>
+
+     
+
+
+  </body>
+
+
+
+
+
+</html>
